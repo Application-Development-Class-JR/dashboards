@@ -1,0 +1,11 @@
+<h1>Convert <%= @currency_input%> </h1>
+
+<p>Go <a href="/forex">back</a>.</p>
+
+<ul>
+  <%@array_of_symbols.each do |a_symbol|%>
+  <li>
+    <a href="/forex/<%=@currency_input%>/<%= a_symbol %>"> Convert 1 <%=@currency_input%> to <%= a_symbol%>... </a>
+  </li>
+  <%end%>
+</ul>
